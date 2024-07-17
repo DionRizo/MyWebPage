@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: #8E7A74;
 }
 
 
@@ -9,9 +9,9 @@ body{
     display: grid;
     padding-top: 100px;
     justify-content: center;
-    border: 1px solid black;
     margin: .5%;
-
+    background: url('./pattern1/topography.svg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 
@@ -27,6 +27,8 @@ body{
     align-items: center;
     padding: 50px;
     background-color: beige;
+    position: relative; /* Added to allow positioning of .projects */
+
 }
 
 
@@ -60,8 +62,65 @@ body{
     padding-bottom: 60px;
 }
 
+.projects{
+    padding: 50px 40px 40px 40px;
+    background-color: #f5f5dc;
+    position: absolute; /* Position absolute to place it relative to .experience */
+    top: 131%; /* Adjust as needed */
+    left: 0; /* Align to the left */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.projects h2{
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.projects p{
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.projects img {
+    width: 500px;
+    height: auto;
+}
+
+.rescalable-div {
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+    margin: 20px 0;
+}
+
 h2{
     font-family: 'Lobster', cursive;
 
 }
+
+
+@media (max-width: 575.98px) {
+    .rescalable-div {
+      background-color: lightcoral;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .rescalable-div {
+      background-color: lightgreen;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .rescalable-div {
+      background-color: lightblue;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .rescalable-div {
+      background-color: lightgoldenrodyellow;
+    }
+  }
+  
 
