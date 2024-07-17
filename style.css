@@ -1,0 +1,67 @@
+body{
+    background-color: black;
+}
+
+
+
+
+.top-container{
+    display: grid;
+    padding-top: 100px;
+    justify-content: center;
+    border: 1px solid black;
+    margin: .5%;
+
+}
+
+
+.main-container{
+    display: grid;
+    height: 100vh;
+}
+
+
+.experience{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: beige;
+}
+
+
+.experience img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+.experience h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.experience p{
+    text-align: center;
+}
+
+.name-title{  
+    display: grid;
+    padding: 15px;
+    justify-items: center;
+    font-family: 'Satisfy', cursive;
+    margin: 0px;
+    color: beige;
+}
+
+.name{
+    padding-bottom: 60px;
+}
+
+h2{
+    font-family: 'Lobster', cursive;
+
+}
+
