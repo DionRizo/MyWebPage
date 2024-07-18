@@ -1,51 +1,104 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Nanum Myeongjo', serif;
+    box-sizing: border-box;
 }
 
 .container {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
 }
 
 .section {
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
 }
 
-.header, .projects, .contact {
+.name-title {
+    text-align: center;
+    background: #f4f4f4;
+    padding: 50px 0;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #e2e2e2;
+    padding: 50px 20px;
+}
+
+.profile p{
+    text-align: left;
+    font-weight: bold;
+    width: 75%;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding-right: 40px;
+}
+
+.projects {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-.about {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.about img {
-    max-width: 150px;
-    border-radius: 50%;
+    background: #d1d1d1;
+    padding: 50px 20px;
 }
 
 .project {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    margin-bottom: 30px;
 }
 
-@media (max-width: 768px) {
-    .about {
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-content.two{
+    flex-direction: row-reverse;
+    text-align: right;
+
+}
+
+.project-content div {
+    flex: 1;
+}
+
+.skills {
+    text-align: center;
+    background: #c1c1c1;
+    padding: 50px 20px;
+}
+
+.contact {
+    text-align: center;
+    background: #b1b1b1;
+    padding: 50px 20px;
+}
+
+@media (min-width: 768px) {
+    .project-content {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 767px) {
+    .project-content {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .about img {
-        max-width: 100px;
     }
 }
-
