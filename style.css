@@ -22,6 +22,7 @@ body, html {
     text-align: center;
     background: #f4f4f4;
     padding: 50px 0;
+    font-size: 25px;
 }
 
 .profile {
@@ -32,10 +33,11 @@ body, html {
     padding: 50px 20px;
 }
 
-.profile p{
+.profile p {
     text-align: left;
     font-weight: bold;
     width: 75%;
+    line-height: 1.5;
 }
 
 .profile img {
@@ -59,24 +61,41 @@ body, html {
     margin-bottom: 30px;
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
-}
-
 .project-content {
     display: flex;
     flex-direction: row;
-}
-
-.project-content.two{
-    flex-direction: row-reverse;
-    text-align: right;
-
+    margin-bottom: 30px;
+    justify-content: space-between; /* Ensure the space is distributed between text and image */
+    align-items: center; /* Center the items vertically */
 }
 
 .project-content div {
-    flex: 1;
+    flex: 1; /* Ensures that text and image each take up half the width */
+    max-width: 50%; /* Ensure the content doesn't overflow */
+}
+
+.project-content img {
+    width: 100%; /* Make the image take up full width of its container */
+    height: auto;
+    object-fit: cover; /* Ensure the image fits within its container */
+}
+
+.project-content p, h3 {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.project-content.two {
+    flex-direction: row-reverse;
+}
+
+.project-content.two p, .project-content.two h3 {
+    text-align: right;
+}
+
+.project-content.two img {
+    margin-left: 0;
+    margin-right: 20px; /* Adjust margin to add space between the image and the text */
 }
 
 .skills {
@@ -85,20 +104,31 @@ body, html {
     padding: 50px 20px;
 }
 
-.contact {
+.skills h3 {
     text-align: center;
-    background: #b1b1b1;
-    padding: 50px 20px;
 }
 
-@media (min-width: 768px) {
-    .project-content {
-        flex-direction: row;
-    }
+.contact {
+    text-align: center;
+    background: black;
+    padding: 50px 20px;
+    color: white;
+}
+
+.contact h3 {
+    text-align: center;
 }
 
 @media (max-width: 767px) {
     .project-content {
         flex-direction: column;
+    }
+    .project-content img {
+        width: 100%; /* Make the image take full width on smaller screens */
+        margin: 0; /* Remove margins */
+    }
+    .project-content.two img {
+        width: 100%; /* Make the image take full width on smaller screens */
+        margin: 0; /* Remove margins */
     }
 }
