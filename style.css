@@ -110,9 +110,9 @@ body, html {
 
 .contact {
     text-align: center;
-    background: black;
+    background: #d1d1d1;
     padding: 50px 20px;
-    color: white;
+    color: black;
 }
 
 .contact h3 {
