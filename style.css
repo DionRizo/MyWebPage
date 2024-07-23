@@ -21,23 +21,26 @@ body, html {
 .name-title {
     text-align: center;
     background: #f4f4f4;
-    padding: 50px 0;
+    padding: 400px 0;
     font-size: 25px;
 }
 
 .profile {
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column; /* Add this to stack the content vertically */
     text-align: center;
     background: #e2e2e2;
-    padding: 50px 20px;
+    height: 100%; /* Ensure the height is 100% or set a specific height if needed */
 }
 
 .profile p {
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     width: 75%;
     line-height: 1.5;
+    padding: 0px 20px 0px 20px;
 }
 
 .profile img {
@@ -45,8 +48,8 @@ body, html {
     height: 150px;
     border-radius: 50%;
     margin-bottom: 20px;
-    padding-right: 40px;
 }
+
 
 .projects {
     display: flex;
@@ -119,14 +122,32 @@ body, html {
     text-align: center;
 }
 
+/* Media query for smaller screens */
 @media (max-width: 767px) {
     .project-content {
         flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
     }
+
+    .project-content div {
+        max-width: 100%; /* Allow content to take full width */
+        margin-bottom: 20px; /* Add space between text and image */
+    }
+
     .project-content img {
         width: 100%; /* Make the image take full width on smaller screens */
         margin: 0; /* Remove margins */
     }
+
+    .project-content.two {
+        flex-direction: column; /* Ensure the reversed content also stacks vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .project-content.two div {
+        margin-bottom: 20px; /* Add space between text and image */
+    }
+
     .project-content.two img {
         width: 100%; /* Make the image take full width on smaller screens */
         margin: 0; /* Remove margins */
