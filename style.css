@@ -64,6 +64,13 @@ body, html {
     margin-bottom: 30px;
 }
 
+.h2-projects {
+    text-align: center;
+    justify-content: center;
+    padding: 0px 0px 70px 0px;
+    margin: 0;
+}
+
 .project-content {
     display: flex;
     flex-direction: row;
