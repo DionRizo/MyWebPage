@@ -19,11 +19,54 @@ body, html {
 }
 
 .name-title {
+    position: relative;
     text-align: center;
-    background: #f4f4f4;
-    padding: 400px 0;
-    font-size: 25px;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #f7f7f7, #eaeaea);
+    font-family: 'Nanum Myeongjo', serif;
+    overflow: hidden;
 }
+
+.name-title h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.name-title h2 {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* Pseudo-elements for isometric lines */
+.name-title::before,
+.name-title::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 200px;
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1) 10px,
+        rgba(50, 50, 50, 0.1) 10px,
+        rgba(50, 50, 50, 0.1) 20px
+    );
+    opacity: 0.5;
+    transform: rotate(-10deg);
+}
+
+/* Top-left lines */
+.name-title::before {
+    top: -50px;
+    left: -50%;
+}
+
+/* Bottom-right lines */
+.name-title::after {
+    bottom: -50px;
+    right: -50%;
+}
+
 
 .profile {
     display: flex;
@@ -158,5 +201,56 @@ body, html {
     .project-content.two img {
         width: 100%; /* Make the image take full width on smaller screens */
         margin: 0; /* Remove margins */
+    }
+}
+
+/* Styles for the Experience section */
+.experience {
+    text-align: center;
+    background: #e2e2e2; /* Same background as profile for consistency */
+    padding: 50px 20px; /* Similar padding to other sections */
+}
+
+.experience h3 {
+    margin-bottom: 30px; /* Add spacing below the heading */
+    font-size: 24px; /* Ensure the font size is prominent */
+}
+
+.job {
+    text-align: left; /* Align job details to the left */
+    margin: 0 auto; /* Center the content within the section */
+    max-width: 800px; /* Limit width for better readability */
+    line-height: 1.6; /* Improve readability of the text */
+    background: #ffffff; /* Add a subtle background to the job details */
+    padding: 20px; /* Add padding around the content */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.job h4 {
+    font-size: 20px; /* Make the job title stand out */
+    margin-bottom: 10px; /* Add spacing below the job title */
+}
+
+.job p, .job ul {
+    margin: 10px 0; /* Space out paragraphs and lists */
+}
+
+.job ul {
+    padding-left: 20px; /* Add padding for bullet points */
+}
+
+.job li {
+    margin-bottom: 5px; /* Space out list items */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .experience {
+        padding: 30px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .job {
+        padding: 15px; /* Adjust padding inside the job section */
     }
 }
